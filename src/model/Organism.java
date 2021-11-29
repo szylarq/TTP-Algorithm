@@ -1,4 +1,7 @@
+package model;
+
 import java.util.*;
+import main.*;
 
 public class Organism {
 

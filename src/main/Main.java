@@ -1,3 +1,11 @@
+package main;
+
+import model.AdjacencyMatrix;
+import model.Item;
+import model.Population;
+import model.Vertex;
+import utils.FileHandler;
+
 import java.io.*;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +17,7 @@ public class Main {
     private final static int MAX_GENERATION_LEVEL = 100;
     private final static double CROSSOVER_PROBABILITY = 0.7;
     private final static double MUTATION_PROBABILITY = 0.01;
-    private final static String DEFAULT_DIRECTORY = "E:\\Documents\\Dokumenty\\Java Projekty\\TTP Algorithm\\Results\\";
+    private final static String DEFAULT_DIRECTORY = "E:\\Documents\\Dokumenty\\Java Projekty\\TTP Algorithm\\data\\";
 
     public static void main(String [] args) throws FileNotFoundException {
 
@@ -35,7 +43,7 @@ public class Main {
         fileNames[15] = "hard_3";
         fileNames[16] = "hard_4";
 
-        String currentFileName = fileNames[0];
+        String currentFileName = fileNames[1];
 
         String filePathRead = DEFAULT_DIRECTORY + currentFileName + fileReadExtension;
         String filePathWrite = DEFAULT_DIRECTORY + currentFileName + fileWriteExtension;
@@ -71,7 +79,7 @@ public class Main {
         System.out.println(finalPopulation.getPopulationQuality());
 //            System.out.println(finalPopulation.getListOfOrganisms().get(0).getQualityOfAnOrganism());
 //            System.out.println(finalPopulation.getListOfOrganisms().get(0).getListOfItems());
-//            System.out.println(Algorithm.countValuesOfAllItems(finalPopulation.getListOfOrganisms().get(0).getListOfItems()));
+//            System.out.println(main.Algorithm.countValuesOfAllItems(finalPopulation.getListOfOrganisms().get(0).getListOfItems()));
 
 
         }

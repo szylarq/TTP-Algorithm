@@ -1,3 +1,7 @@
+package utils;
+
+import model.*;
+
 public class Utils {
 
     public static double countDistance(Vertex oneVertex, Vertex otherVertex){

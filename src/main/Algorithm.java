@@ -1,3 +1,10 @@
+package main;
+
+import model.AdjacencyMatrix;
+import model.Item;
+import model.Population;
+import model.Vertex;
+
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
@@ -43,9 +50,9 @@ public class Algorithm {
     }
 
     private static Population createNewGeneration(Population oldPopulation, int tournamentSize,
-                                                 double crossoverProbability, Map<Integer, List<Item>> mapOfItems,
-                                                 int knapsackCapacity, AdjacencyMatrix adjacencyMatrix,
-                                                 double minSpeed, double maxSpeed, double mutationProbability){
+                                                  double crossoverProbability, Map<Integer, List<Item>> mapOfItems,
+                                                  int knapsackCapacity, AdjacencyMatrix adjacencyMatrix,
+                                                  double minSpeed, double maxSpeed, double mutationProbability){
 
         Population newGeneration = oldPopulation.crossover(oldPopulation, oldPopulation.tournament(tournamentSize),
                 crossoverProbability, mapOfItems, knapsackCapacity, adjacencyMatrix, minSpeed, maxSpeed);

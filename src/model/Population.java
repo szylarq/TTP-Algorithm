@@ -1,3 +1,5 @@
+package model;
+
 import java.util.*;
 
 public class Population {
@@ -15,7 +17,7 @@ public class Population {
     }
 
     public static Population createBasicPopulation(List<Vertex> listOfVertices, Map<Integer, List<Item>> mapOfItems,
-                                                    int knapsackCapacity, AdjacencyMatrix adjacencyMatrix,
+                                                   int knapsackCapacity, AdjacencyMatrix adjacencyMatrix,
                                                    double minSpeed, double maxSpeed){
 
         List<Organism> newPopulationList = new ArrayList<>();
@@ -74,7 +76,7 @@ public class Population {
     }
 
     private void initialize(Map<Integer, List<Item>> mapOfItems, int knapsackCapacity, AdjacencyMatrix adjacencyMatrix,
-                           double minSpeed, double maxSpeed){
+                            double minSpeed, double maxSpeed){
 
         for(Organism organism : listOfOrganisms){
 
@@ -120,8 +122,8 @@ public class Population {
     }
 
     private Organism createNewSuccessor(Organism mother, Organism father, Map<Integer, List<Item>> mapOfItems,
-                                       int knapsackCapacity, AdjacencyMatrix adjacencyMatrix, double minSpeed,
-                                       double maxSpeed){
+                                        int knapsackCapacity, AdjacencyMatrix adjacencyMatrix, double minSpeed,
+                                        double maxSpeed){
 
         int listSize = mother.getListOfVertices().size();
         Random random = new Random();
@@ -212,7 +214,7 @@ public class Population {
     }
 
     public boolean mutation(double mutationProbability, Map<Integer, List<Item>> mapOfItems, int knapsackCapacity,
-                         AdjacencyMatrix adjacencyMatrix, double minSpeed, double maxSpeed){
+                            AdjacencyMatrix adjacencyMatrix, double minSpeed, double maxSpeed){
 
         Organism mutatedOrganism;
         boolean didAnyoneMutate = false;
